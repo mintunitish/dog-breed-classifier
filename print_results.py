@@ -73,10 +73,10 @@ def print_results(results_dic, results_stats_dic, model,
             
     if (print_incorrect_dogs and ((results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images'])):
         print("\nINCORRECT Dog/NOT Dog Assignments:")
-        
+       
         for key in results_dic:
             if results_dic[key][2] != 1:
-                print(results_stats_dic[key])
+                print(results_dic[key])
                 
     if (print_incorrect_breed and (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'])):
         print("\nINCORRECT Dog Breed Assignment:")
