@@ -68,15 +68,16 @@ def print_results(results_dic, results_stats_dic, model,
     
     print(" ")
     for key in results_stats_dic:
-        if key.startswith('p'):
-            print(key + ": " + str(results_stats_dic[key]))
+        if key.startswith('pct'):
+            print("{:20}: {:.3f}".format(key, results_stats_dic[key]))
             
     if (print_incorrect_dogs and ((results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images'])):
         print("\nINCORRECT Dog/NOT Dog Assignments:")
        
         for key in results_dic:
-            if results_dic[key][2] != 1:
-                print(results_dic[key])
+            if results_dic[key][3] != results_dic[key][4]:
+                print("Pet Label: {:3}".format(results_dic[key][0]))
+                print("Classifier Label: {:3}".format(results_dic[key][1]))
                 
     if (print_incorrect_breed and (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'])):
         print("\nINCORRECT Dog Breed Assignment:")
