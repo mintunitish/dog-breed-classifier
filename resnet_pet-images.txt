@@ -327,3 +327,37 @@ pct_correct_breed: 56.666666666666664
 pct_correct_notdogs: 90.0
 
 INCORRECT Dog/NOT Dog Assignments:
+['german shepherd dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1, 1]
+['great horned owl', 'great grey owl, great gray owl, strix nebulosa', 0, 0, 0]
+['boston terrier', 'boston bull, boston terrier', 0, 1, 1]
+['boston terrier', 'boston bull, boston terrier', 0, 1, 1]
+['gecko', 'tailed frog, bell toad, ribbed toad, tailed toad, ascaphus trui', 0, 0, 0]
+['great dane', 'great dane', 0, 1, 1]
+['great pyrenees', 'kuvasz', 0, 1, 1]
+['saint bernard', 'saint bernard, st bernard', 0, 1, 1]
+['german shorthaired pointer', 'german shorthaired pointer', 0, 1, 1]
+['german shepherd dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 0, 1, 1]
+['great pyrenees', 'great pyrenees', 0, 1, 1]
+['saint bernard', 'saint bernard, st bernard', 0, 1, 1]
+['cat', 'norwegian elkhound, elkhound', 0, 0, 1]
+['gecko', 'african chameleon, chamaeleo chamaeleon', 0, 0, 0]
+['beagle', 'walker hound, walker foxhound', 0, 1, 1]
+['golden retriever', 'leonberg', 0, 1, 1]
+['boston terrier', 'boston bull, boston terrier', 0, 1, 1]
+
+INCORRECT Dog Breed Assignment:
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+Real:             boston terrier   Classifier:    boston bull, boston terrier
+Real:             boston terrier   Classifier:    boston bull, boston terrier
+Real:                 great dane   Classifier:                     great dane
+Real:             great pyrenees   Classifier:                         kuvasz
+Real:              saint bernard   Classifier:      saint bernard, st bernard
+Real: german shorthaired pointer   Classifier:     german shorthaired pointer
+Real:        german shepherd dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+Real:             great pyrenees   Classifier:                 great pyrenees
+Real:              saint bernard   Classifier:      saint bernard, st bernard
+Real:                     beagle   Classifier:  walker hound, walker foxhound
+Real:           golden retriever   Classifier:                       leonberg
+Real:             boston terrier   Classifier:    boston bull, boston terrier
+
+** Total Elapsed Runtime: 0:0:6
