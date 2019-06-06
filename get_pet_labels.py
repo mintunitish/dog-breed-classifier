@@ -20,6 +20,7 @@
 from os import listdir
 from os import path
 
+
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
 #       with this function
@@ -42,25 +43,26 @@ def get_pet_labels(image_dir):
          index 0 = pet image label (string)
     """
     file_name_list = listdir(image_dir)
-    
+
     result_dic = dict()
-    
+
     for index in range(0, len(file_name_list), 1):
         if file_name_list[index][0] != ".":
             pet_label = ""
             extension_stripped_file_name = path.splitext(file_name_list[index])[0]
             processed_file_name = extension_stripped_file_name.lower().split('_')
-            
+
             for word in processed_file_name:
-                if  word.isalpha():
+                if word.isalpha():
                     pet_label += word + " "
-                    
+
             pet_label = pet_label.strip()
             if file_name_list[index] not in result_dic:
-                result_dic[file_name_list[index]]  =  [pet_label]
+                result_dic[file_name_list[index]] = [pet_label]
             else:
-                print("** Warning: Key=", file_name_list[index], "already exists in result_dic with value = ", result_dic[file_name_list[index]])
-            
+                print("** Warning: Key=", file_name_list[index], "already exists in result_dic with value = ",
+                      result_dic[file_name_list[index]])
+
     # Replace None with the results_dic dictionary that you created with this
     # function
     return result_dic
